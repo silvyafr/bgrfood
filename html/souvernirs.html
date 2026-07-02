@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Oleh-oleh - Bogor Food CMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
+<body>
+
+<div class="sidebar">
+
+    <h2>🍛 Bogor Food CMS</h2>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">🏠 Dashboard</a>
+        </li>
+
+        <li>
+            <a href="foods.html">🍜 Makanan</a>
+        </li>
+
+        <li>
+            <a href="drinks.html">🥤 Minuman</a>
+        </li>
+
+        <li class="active">
+            <a href="souvenirs.html">🎁 Oleh-oleh</a>
+        </li>
+
+        <li>
+            <a href="categories.html">📂 Kategori</a>
+        </li>
+
+        <li>
+            <a href="sync.html">☁ Sinkronisasi</a>
+        </li>
+
+        <li>
+            <a href="settings.html">⚙ Pengaturan</a>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Kelola Oleh-oleh</h1>
+
+<small>Manajemen data oleh-oleh khas Bogor</small>
+
+</div>
+
+<button id="addSouvenirBtn">
+
++ Tambah Data
+
+</button>
+
+</header>
+
+<section class="toolbar">
+
+<input
+type="text"
+placeholder="🔍 Cari oleh-oleh..."
+>
+
+<select>
+
+<option>Semua Status</option>
+
+<option>Published</option>
+
+<option>Draft</option>
+
+</select>
+
+</section>
+
+<section class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Foto</th>
+
+<th>Nama</th>
+
+<th>Kategori</th>
+
+<th>Status</th>
+
+<th>Sync</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>🎁</td>
+
+<td>Lapis Talas</td>
+
+<td>Oleh-oleh</td>
+
+<td>
+
+<span class="badge published">
+
+Published
+
+</span>
+
+</td>
+
+<td>
+
+<span class="badge synced">
+
+Synced
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>🍪</td>
+
+<td>Roti Unyil</td>
+
+<td>Oleh-oleh</td>
+
+<td>
+
+<span class="badge draft">
+
+Draft
+
+</span>
+
+</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div id="souvenirModal" class="modal" style="display:none;">
+
+<div class="modal-content">
+
+<h2>Tambah Oleh-oleh</h2>
+
+<label>Nama Oleh-oleh</label>
+
+<input type="text">
+
+<label>Kategori</label>
+
+<select>
+
+<option>Oleh-oleh</option>
+
+</select>
+
+<label>Upload Gambar</label>
+
+<input type="file">
+
+<label>Deskripsi</label>
+
+<textarea rows="5"></textarea>
+
+<label>Status</label>
+
+<select>
+
+<option>Draft</option>
+
+<option>Published</option>
+
+</select>
+
+<div style="margin-top:20px;">
+
+<button>Simpan</button>
+
+<button>Tutup</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/souvenirs.js"></script>
+
+</div>
+
+</body>
+</html>
