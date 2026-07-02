@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori - Bogor Food CMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
+<body>
+
+<div class="sidebar">
+
+    <h2>🍛 Bogor Food CMS</h2>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">🏠 Dashboard</a>
+        </li>
+
+        <li>
+            <a href="foods.html">🍜 Makanan</a>
+        </li>
+
+        <li>
+            <a href="drinks.html">🥤 Minuman</a>
+        </li>
+
+        <li>
+            <a href="souvenirs.html">🎁 Oleh-oleh</a>
+        </li>
+
+        <li class="active">
+            <a href="categories.html">📂 Kategori</a>
+        </li>
+
+        <li>
+            <a href="sync.html">☁ Sinkronisasi</a>
+        </li>
+
+        <li>
+            <a href="settings.html">⚙ Pengaturan</a>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Kelola Kategori</h1>
+
+<small>Manajemen kategori makanan khas Bogor</small>
+
+</div>
+
+<button id="addCategoryBtn">
+
++ Tambah Kategori
+
+</button>
+
+</header>
+
+<section class="toolbar">
+
+<input
+type="text"
+placeholder="🔍 Cari kategori..."
+>
+
+</section>
+
+<section class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Nama Kategori</th>
+
+<th>Jumlah Data</th>
+
+<th>Status</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1</td>
+
+<td>Makanan</td>
+
+<td>25</td>
+
+<td>
+
+<span class="badge published">
+
+Aktif
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Minuman</td>
+
+<td>12</td>
+
+<td>
+
+<span class="badge published">
+
+Aktif
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Oleh-oleh</td>
+
+<td>8</td>
+
+<td>
+
+<span class="badge published">
+
+Aktif
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div id="categoryModal" class="modal" style="display:none;">
+
+<div class="modal-content">
+
+<h2>Tambah Kategori</h2>
+
+<label>Nama Kategori</label>
+
+<input type="text">
+
+<label>Deskripsi</label>
+
+<textarea rows="5"></textarea>
+
+<div style="margin-top:20px;">
+
+<button>Simpan</button>
+
+<button>Tutup</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/categories.js"></script>
+
+</div>
+
+</body>
+</html>
