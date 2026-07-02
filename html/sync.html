@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinkronisasi - Bogor Food CMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
+<body>
+
+<div class="sidebar">
+
+    <h2>🍛 Bogor Food CMS</h2>
+
+    <ul>
+
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+        <li><a href="foods.html">🍜 Makanan</a></li>
+
+        <li><a href="drinks.html">🥤 Minuman</a></li>
+
+        <li><a href="souvenirs.html">🎁 Oleh-oleh</a></li>
+
+        <li><a href="categories.html">📂 Kategori</a></li>
+
+        <li class="active">
+            <a href="sync.html">☁ Sinkronisasi</a>
+        </li>
+
+        <li><a href="settings.html">⚙ Pengaturan</a></li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Sinkronisasi Data</h1>
+
+<small>Sinkronkan data lokal dengan server</small>
+
+</div>
+
+<div>
+
+<span class="status online">
+🟢 Online
+</span>
+
+</div>
+
+</header>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>Pending</h3>
+
+<h1>3</h1>
+
+<p>Belum dikirim</p>
+
+</div>
+
+<div class="card">
+
+<h3>Synced</h3>
+
+<h1>25</h1>
+
+<p>Sudah sinkron</p>
+
+</div>
+
+<div class="card">
+
+<h3>Failed</h3>
+
+<h1>0</h1>
+
+<p>Gagal sinkron</p>
+
+</div>
+
+</section>
+
+<section class="table-container">
+
+<h2>Daftar Data Pending</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Nama</th>
+
+<th>Kategori</th>
+
+<th>Status</th>
+
+<th>Terakhir Diubah</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1</td>
+
+<td>Soto Mie Bogor</td>
+
+<td>Makanan</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+02 Juli 2026
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Bir Kocok</td>
+
+<td>Minuman</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+02 Juli 2026
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Lapis Talas</td>
+
+<td>Oleh-oleh</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+02 Juli 2026
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section class="sync-action">
+
+<button id="syncNow">
+
+☁ Sinkronkan Sekarang
+
+</button>
+
+<button id="refresh">
+
+🔄 Refresh
+
+</button>
+
+</section>
+
+<section class="box">
+
+<h2>Riwayat Sinkronisasi</h2>
+
+<ul class="activity">
+
+<li>✅ Sinkronisasi berhasil - 02 Juli 2026 20:00</li>
+
+<li>✅ Sinkronisasi berhasil - 02 Juli 2026 17:25</li>
+
+<li>⚠ Tidak ada koneksi internet - 02 Juli 2026 15:10</li>
+
+<li>✅ Sinkronisasi berhasil - 01 Juli 2026 21:40</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<script src="../js/sync.js"></script>
+
+</body>
+</html>
