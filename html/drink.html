@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Minuman - Bogor Food CMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
+<body>
+
+<div class="sidebar">
+
+    <h2>🍛 Bogor Food CMS</h2>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="foods.html">
+                🍜 Makanan
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="drinks.html">
+                🥤 Minuman
+            </a>
+        </li>
+
+        <li>
+            <a href="souvenirs.html">
+                🎁 Oleh-oleh
+            </a>
+        </li>
+
+        <li>
+            <a href="categories.html">
+                📂 Kategori
+            </a>
+        </li>
+
+        <li>
+            <a href="sync.html">
+                ☁ Sinkronisasi
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                ⚙ Pengaturan
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Kelola Minuman</h1>
+
+<small>
+Manajemen data minuman khas Bogor
+</small>
+
+</div>
+
+<button id="addDrinkBtn">
+
++ Tambah Data
+
+</button>
+
+</header>
+
+
+<section class="toolbar">
+
+<input
+type="text"
+placeholder="🔍 Cari minuman..."
+>
+
+<select>
+
+<option>Semua Status</option>
+
+<option>Published</option>
+
+<option>Draft</option>
+
+</select>
+
+</section>
+
+
+<section class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Foto</th>
+
+<th>Nama</th>
+
+<th>Kategori</th>
+
+<th>Status</th>
+
+<th>Sync</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>🥤</td>
+
+<td>Bir Kocok</td>
+
+<td>Minuman</td>
+
+<td>
+
+<span class="badge published">
+
+Published
+
+</span>
+
+</td>
+
+<td>
+
+<span class="badge synced">
+
+Synced
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🧋</td>
+
+<td>Es Pala</td>
+
+<td>Minuman</td>
+
+<td>
+
+<span class="badge draft">
+
+Draft
+
+</span>
+
+</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Hapus</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<div
+id="drinkModal"
+class="modal"
+style="display:none;"
+>
+
+<div class="modal-content">
+
+<h2>
+
+Tambah Minuman
+
+</h2>
+
+
+<label>
+
+Nama Minuman
+
+</label>
+
+<input type="text">
+
+
+<label>
+
+Kategori
+
+</label>
+
+<select>
+
+<option>
+
+Minuman
+
+</option>
+
+</select>
+
+
+<label>
+
+Upload Gambar
+
+</label>
+
+<input type="file">
+
+
+<label>
+
+Deskripsi
+
+</label>
+
+<textarea rows="5">
+
+</textarea>
+
+
+<label>
+
+Status
+
+</label>
+
+<select>
+
+<option>
+
+Draft
+
+</option>
+
+<option>
+
+Published
+
+</option>
+
+</select>
+
+
+<div style="margin-top:20px;">
+
+<button>
+
+Simpan
+
+</button>
+
+<button>
+
+Tutup
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/drinks.js"></script>
+
+</div>
+
+</body>
+</html>
