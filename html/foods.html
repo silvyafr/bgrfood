@@ -1,1 +1,122 @@
+from textwrap import dedent
 
+html = dedent("""<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kelola Makanan - Bogor Food CMS</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>🍛 Bogor Food CMS</h2>
+  <ul>
+    <li><a href="dashboard.html">🏠 Dashboard</a></li>
+    <li class="active"><a href="foods.html">🍜 Makanan</a></li>
+    <li><a href="drinks.html">🥤 Minuman</a></li>
+    <li><a href="souvenirs.html">🎁 Oleh-oleh</a></li>
+    <li><a href="categories.html">📂 Kategori</a></li>
+    <li><a href="sync.html">☁ Sinkronisasi</a></li>
+    <li><a href="settings.html">⚙ Pengaturan</a></li>
+  </ul>
+</div>
+
+<div class="main">
+<header class="topbar">
+  <div>
+    <h1>Kelola Makanan</h1>
+    <small>Manajemen data makanan khas Bogor</small>
+  </div>
+  <button id="addFoodBtn">+ Tambah Data</button>
+</header>
+
+<section class="toolbar">
+  <input type="text" placeholder="🔍 Cari makanan...">
+  <select>
+    <option>Semua Status</option>
+    <option>Published</option>
+    <option>Draft</option>
+  </select>
+</section>
+
+<section class="table-container">
+<table>
+<thead>
+<tr>
+<th>Foto</th>
+<th>Nama</th>
+<th>Kategori</th>
+<th>Status</th>
+<th>Sync</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody id="foodTable">
+<tr>
+<td>🍜</td>
+<td>Soto Mie Bogor</td>
+<td>Makanan</td>
+<td><span class="badge published">Published</span></td>
+<td><span class="badge synced">Synced</span></td>
+<td>
+<button>Edit</button>
+<button>Hapus</button>
+</td>
+</tr>
+
+<tr>
+<td>🥗</td>
+<td>Asinan Bogor</td>
+<td>Makanan</td>
+<td><span class="badge draft">Draft</span></td>
+<td><span class="badge pending">Pending</span></td>
+<td>
+<button>Edit</button>
+<button>Hapus</button>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<div id="foodModal" class="modal" style="display:none">
+<div class="modal-content">
+<h2>Tambah Makanan</h2>
+
+<label>Nama Makanan</label>
+<input type="text">
+
+<label>Kategori</label>
+<select>
+<option>Makanan</option>
+</select>
+
+<label>Upload Gambar</label>
+<input type="file">
+
+<label>Deskripsi</label>
+<textarea rows="5"></textarea>
+
+<label>Status</label>
+<select>
+<option>Draft</option>
+<option>Published</option>
+</select>
+
+<div style="margin-top:15px">
+<button>Simpan</button>
+<button>Tutup</button>
+</div>
+
+</div>
+</div>
+
+<script src="../js/foods.js"></script>
+</body>
+</html>
+""")
+path="/mnt/data/foods.html"
+with open(path,"w",encoding="utf-8") as f:f.write(html)
+print(path)
